@@ -1,0 +1,29 @@
+{
+  "name": "prism-regex-lab",
+  "version": "1.0.0",
+  "description": "Live regex tester with match highlighting, capture groups, replace preview and plain-English explanations.",
+  "scripts": {
+    "test": "node --test",
+    "start": "npx --yes serve ."
+  },
+  "keywords": [
+    "regex",
+    "regular-expressions",
+    "regex-tester",
+    "developer-tools",
+    "devtools",
+    "javascript",
+    "vanilla-js",
+    "prism-protocol"
+  ],
+  "author": "Soumya Bhandare (krishyaa06)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krishyaa06/prism-regex-lab.git"
+  },
+  "homepage": "https://krishyaa06.github.io/prism-regex-lab/",
+  "engines": {
+    "node": ">=18.17"
+  }
+}

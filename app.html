@@ -1,0 +1,37 @@
+    <section class="card">
+      <div class="regex-bar">
+        <span class="slash">/</span>
+        <input id="pattern" class="code" spellcheck="false" aria-label="Regular expression" placeholder="your pattern" />
+        <span class="slash">/</span>
+        <div class="flags" id="flags">
+          <label title="global"><input type="checkbox" value="g" checked />g</label>
+          <label title="ignore case"><input type="checkbox" value="i" />i</label>
+          <label title="multiline"><input type="checkbox" value="m" />m</label>
+          <label title="dotAll"><input type="checkbox" value="s" />s</label>
+          <label title="unicode"><input type="checkbox" value="u" />u</label>
+        </div>
+        <button class="btn small" id="copyre">Copy</button>
+      </div>
+      <div class="row lib" id="lib"></div>
+    </section>
+    <section class="grid g2 lab">
+      <div class="card">
+        <div class="card-title"><h2>Test string</h2><span id="count" class="pill">0 matches</span></div>
+        <div class="hl-wrap">
+          <pre class="hl" id="hl" aria-hidden="true"></pre>
+          <textarea id="text" spellcheck="false" aria-label="Test string"></textarea>
+        </div>
+        <label class="field rep">Replace with <input id="repl" class="code" placeholder="e.g. [$1] or $<year>" /></label>
+        <pre class="out small-out" id="replOut"></pre>
+      </div>
+      <div class="stack">
+        <div class="card">
+          <div class="card-title"><h2>Matches</h2></div>
+          <div id="list" class="list"></div>
+        </div>
+        <div class="card">
+          <div class="card-title"><h2>Explanation</h2></div>
+          <div id="explain" class="explain"></div>
+        </div>
+      </div>
+    </section>

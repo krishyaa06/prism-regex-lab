@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prism Regex Lab · Prism Protocol</title>
+  <meta name="description" content="Live regex tester with match highlighting, capture groups, replace preview and plain-English explanations." />
+  <meta name="theme-color" content="#07080f" />
+  <meta property="og:title" content="Prism Regex Lab · Prism Protocol" />
+  <meta property="og:description" content="Live regex tester with match highlighting, capture groups, replace preview and plain-English explanations." />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/prism.css" />
+  <link rel="stylesheet" href="css/app.css" />
+  <style>:root{--accent:#3EE69A;--accent-2:#00D2FF}</style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./"><span class="mark">◇</span><b>PRISM</b><span>Regex Lab</span></a>
+    <nav>
+      <a class="btn small" href="https://github.com/krishyaa06/prism-regex-lab" target="_blank" rel="noreferrer">★ GitHub</a>
+    </nav>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow">🧪 Dev Tools</p>
+      <h1>Regex, <em>finally readable.</em></h1>
+      <p class="lead">Write a pattern, watch it highlight live, see every group, and read a plain-English explanation of each token.</p>
+    </section>
+    <section class="card">
+      <div class="regex-bar">
+        <span class="slash">/</span>
+        <input id="pattern" class="code" spellcheck="false" aria-label="Regular expression" placeholder="your pattern" />
+        <span class="slash">/</span>
+        <div class="flags" id="flags">
+          <label title="global"><input type="checkbox" value="g" checked />g</label>
+          <label title="ignore case"><input type="checkbox" value="i" />i</label>
+          <label title="multiline"><input type="checkbox" value="m" />m</label>
+          <label title="dotAll"><input type="checkbox" value="s" />s</label>
+          <label title="unicode"><input type="checkbox" value="u" />u</label>
+        </div>
+        <button class="btn small" id="copyre">Copy</button>
+      </div>
+      <div class="row lib" id="lib"></div>
+    </section>
+    <section class="grid g2 lab">
+      <div class="card">
+        <div class="card-title"><h2>Test string</h2><span id="count" class="pill">0 matches</span></div>
+        <div class="hl-wrap">
+          <pre class="hl" id="hl" aria-hidden="true"></pre>
+          <textarea id="text" spellcheck="false" aria-label="Test string"></textarea>
+        </div>
+        <label class="field rep">Replace with <input id="repl" class="code" placeholder="e.g. [$1] or $<year>" /></label>
+        <pre class="out small-out" id="replOut"></pre>
+      </div>
+      <div class="stack">
+        <div class="card">
+          <div class="card-title"><h2>Matches</h2></div>
+          <div id="list" class="list"></div>
+        </div>
+        <div class="card">
+          <div class="card-title"><h2>Explanation</h2></div>
+          <div id="explain" class="explain"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="foot">
+    <span>◇ Prism Regex Lab · Part of <a href="https://dc.gg/prismprotocol" target="_blank" rel="noreferrer">Prism Protocol</a></span>
+    <span><a href="https://github.com/krishyaa06/prism-regex-lab" target="_blank" rel="noreferrer">Source</a> · MIT License · Runs 100% in your browser</span>
+  </footer>
+  <script src="js/prism.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
